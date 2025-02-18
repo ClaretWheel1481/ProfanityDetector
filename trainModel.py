@@ -39,7 +39,6 @@ model = AutoModelForSequenceClassification.from_pretrained(model_name, num_label
 train_dataset = TextDataset(train_texts, train_labels, tokenizer)
 val_dataset = TextDataset(val_texts, val_labels, tokenizer)
 
-# TODO: 根据显存大小调整batch_size
 train_loader = DataLoader(train_dataset, batch_size=16, shuffle=True)
 val_loader = DataLoader(val_dataset, batch_size=16, shuffle=False)
 
