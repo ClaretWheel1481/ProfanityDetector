@@ -1,0 +1,5 @@
+Flask==3.1.0
+pandas==2.2.3
+torch==2.6.0+cu126
+tqdm==4.67.1
+transformers==4.45.2

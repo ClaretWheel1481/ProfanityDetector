@@ -39,8 +39,9 @@ model = AutoModelForSequenceClassification.from_pretrained(model_name, num_label
 train_dataset = TextDataset(train_texts, train_labels, tokenizer)
 val_dataset = TextDataset(val_texts, val_labels, tokenizer)
 
-train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True)
-val_loader = DataLoader(val_dataset, batch_size=32, shuffle=False)
+# TODO: 根据显存大小调整batch_size
+train_loader = DataLoader(train_dataset, batch_size=16, shuffle=True)
+val_loader = DataLoader(val_dataset, batch_size=16, shuffle=False)
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model.to(device)
