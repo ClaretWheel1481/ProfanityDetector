@@ -52,7 +52,7 @@ criterion = nn.CrossEntropyLoss()
 optimizer = optim.AdamW(model.parameters(), lr=2e-5, weight_decay=1e-4)
 
 # 训练轮数
-epochs = 3
+epochs = 10
 total_steps = len(train_loader) * epochs
 
 # 学习率调度器

@@ -59,6 +59,10 @@ def predict():
         "prediction": prediction
     })
 
+@app.route('/api/v1/text/predict', methods=['GET'])
+def ping():
+    return jsonify({'status': 'ok'})
+
 if __name__ == '__main__':
     # 启动 Flask 服务
     app.run(
