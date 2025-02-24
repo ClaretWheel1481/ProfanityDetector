@@ -42,5 +42,6 @@ model = AutoModelForSequenceClassification.from_pretrained(model_dir)
 
 class_names = ["normal", "profanity"]
 
-sample_text = "美好的日子，就应该写屎山代码"
+sample_text = "This is a sample text for prediction"
+
 predict_text(sample_text, model, tokenizer, class_names)
